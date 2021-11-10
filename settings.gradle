@@ -1,0 +1,4 @@
+rootProject.name='BasePorject'
+include ':app'
+include ':Library_Base'
+include ':Library_Res'
