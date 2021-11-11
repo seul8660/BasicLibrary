@@ -1,4 +1,4 @@
-rootProject.name='BasePorject'
+rootProject.name='BasicProject'
 include ':app'
 include ':Library_Base'
 include ':Library_Res'
