@@ -76,6 +76,7 @@ https://github.com/getActivity/XXPermissions
 com.github.getActivity:XXPermissions:12.8
 
 #消息传递框架#
+
 org.greenrobot:eventbus:3.1.1
 
 #图片加载框架#
