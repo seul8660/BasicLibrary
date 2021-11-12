@@ -42,7 +42,9 @@ public class ViewUtils implements Serializable {
         if(getView(resID) instanceof TextView){
            return ((TextView) getView(resID)).getText().toString();
         }
-        else return "";
+        else {
+            return "";
+        }
     }
     public void setTmage(int resID,int imgID){
         ImageView imageView =getView(resID);

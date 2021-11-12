@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.library.base.utils.ActUtils;
 import com.library.base.utils.BindUtils;
+import com.library.base.utils.GsonUtils;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -37,6 +38,8 @@ public class AbstractActivity extends SupportActivity {
        /*新建activity时加入act管理器*/
         ActUtils.addAct(this);
         datas = new HashMap<>();
+
+
     }
 
     /**跳转至新的activity*/
