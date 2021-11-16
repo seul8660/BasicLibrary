@@ -24,6 +24,26 @@ public class GsonUtils {
 
     private final static Gson GSON = GsonFactory.getSingletonGson();
 
+    public static Gson getGson(){
+        return GSON;
+    }
+
+    public static String toJson(List<Object> objects){
+
+        JsonArray jsonArray = new JsonArray();
+
+        for(Object object: objects){
+
+            jsonArray.add(GSON.toJsonTree(object));
+
+        }
+        return jsonArray.toString();
+    }
+
+    public static String toJson(Object object){
+        return GSON.toJson(object);
+    }
+
     public static <T> T parseJsonObject(String jsonText, Class<T> cls){
 
       return GSON.fromJson(jsonText,cls);

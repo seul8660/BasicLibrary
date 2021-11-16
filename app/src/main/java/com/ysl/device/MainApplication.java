@@ -17,5 +17,9 @@ public class MainApplication extends Application {
         super.onCreate();
 
         BasicInit.init(this);
+
+
+
+
     }
 }
