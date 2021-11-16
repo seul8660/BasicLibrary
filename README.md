@@ -63,11 +63,18 @@ https://github.com/getActivity/ShapeView
 
 com.github.getActivity:ShapeView:6.2
 
+#自定义View框架#
+
+com.github.seul8660:RWidgetHelper:v1.0
+
 #Gson容错框架#
+
+封装进GsonUtils
 
 https://github.com/getActivity/GsonFactory
 
 com.github.getActivity:GsonFactory:5.2
+
 
 #权限申请框架#
 
