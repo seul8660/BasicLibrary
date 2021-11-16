@@ -61,13 +61,15 @@ public class ActUtils {
 
         Activity activity =null;
 
-        try {
-            activity = instance.activityStack.lastElement();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        if(!instance.activityStack.empty()){
 
+            try {
+                activity = instance.activityStack.lastElement();
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
         return activity;
     }
 
@@ -91,11 +93,15 @@ public class ActUtils {
      */
     public static void removeAct() {
 
-        try {
-            Activity activity = instance.activityStack.lastElement();
-            removeAct(activity);
-        }
-        catch (Exception e){
+        if(!instance.activityStack.empty()){
+
+            try {
+               Activity activity = instance.activityStack.lastElement();
+               removeAct(activity);
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
         }
 
     }
@@ -119,6 +125,7 @@ public class ActUtils {
      * 结束指定的Activity
      */
     public static void removeAct(Activity activity) {
+
         if (activity != null) {
             instance.activityStack.remove(activity);
             activity.finish();

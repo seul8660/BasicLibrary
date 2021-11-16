@@ -47,7 +47,7 @@ dependencies {
     api  'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
     api  'com.scwang.smart:refresh-footer-classics:2.0.3'//经典加载
 
-    implementation 'me.xuexuan:fragmentationx:1.0.6' //fragment 管理器
+    api 'me.xuexuan:fragmentationx:1.0.6' //fragment 管理器
     api 'com.github.getActivity:ToastUtils:9.6'//吐司管理
 
     api 'com.github.li-xiaojun:XPopup:2.6.6'
@@ -70,5 +70,6 @@ dependencies {
     api 'com.apkfuns.logutils:library:1.7.5'
 
     api 'com.github.seul8660:RWidgetHelper:v1.0'
+
 
 }

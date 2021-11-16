@@ -8,6 +8,10 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.hjq.gson.factory.GsonFactory;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +28,52 @@ public class GsonUtils {
 
       return GSON.fromJson(jsonText,cls);
     }
+
+
+    public static JSONObject parseJsonObject(String jsonText){
+
+        JSONObject jsonObject;
+
+        if (jsonText == null || jsonText.equals("")) {
+
+            jsonObject = new JSONObject();
+
+        } else {
+            try {
+
+                jsonObject = new JSONObject(jsonText);
+
+            } catch (JSONException exception) {
+
+                throw new JsonParseException(jsonText, exception);
+            }
+        }
+        return jsonObject;
+    }
+
+    public static JSONArray parseJsonArray(String jsonText){
+
+        JSONArray jsonArray;
+
+        if (jsonText == null || jsonText.equals("")) {
+
+            jsonArray = new JSONArray();
+
+        } else {
+            try {
+
+                jsonArray = new JSONArray(jsonText);
+
+            } catch (JSONException exception) {
+
+                throw new JsonParseException(jsonText, exception);
+            }
+        }
+
+        return jsonArray;
+
+    }
+
 
     public static <T> T parseJsonObject(JsonElement jsonText, Class<T> cls){
 
@@ -133,6 +183,5 @@ public class GsonUtils {
         }
 
     }
-
 
 }

@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 
 import com.library.base.utils.ActUtils;
 import com.library.base.utils.BindUtils;
-import com.library.base.utils.GsonUtils;
 
 import java.util.HashMap;
 import java.util.Iterator;

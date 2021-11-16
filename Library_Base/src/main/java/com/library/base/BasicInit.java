@@ -3,6 +3,7 @@ package com.library.base;
 import android.app.Application;
 
 import com.hjq.toast.ToastUtils;
+import com.library.base.utils.ActUtils;
 import com.library.base.utils.HawkUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -18,6 +19,9 @@ public class BasicInit {
     public static void init(Application application){
 
         mApplication = application;
+
+        //activity管理器初始化
+        ActUtils.init(mApplication);
 
         //key - value 数据库初始化
         HawkUtils.init(mApplication);
